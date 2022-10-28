@@ -1,4 +1,7 @@
-let sampleInput = 10;
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/staircase/problem";
+// segure CTRL e clique no link para abrir esse desafio no seu navegador
+
+const sampleInput = 10;
 
 function staircase(n) {
   const space = ' ';

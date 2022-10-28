@@ -1,3 +1,6 @@
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/compare-the-triplets/problem";
+// segure CTRL e clique no link para abrir esse desafio no seu navegador
+
 const aliceTriplet = [1, 2, 3];
 const bobTriplet = [3, 2, 1];
 

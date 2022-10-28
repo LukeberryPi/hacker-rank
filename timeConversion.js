@@ -1,7 +1,10 @@
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/time-conversion/problem";
+// segure CTRL e clique no link para abrir esse desafio no seu navegador
+
 const sampleInput = "07:05:45PM";
 
 function timeConversion(s) {
-  let timeCode = s.slice(-2);
+  const timeCode = s.slice(-2);
   const [hours, minutes, seconds] = s.slice(0, -2).split(":");
   
   if (timeCode === "AM") return `${hours}:${minutes}:${seconds}$`;
