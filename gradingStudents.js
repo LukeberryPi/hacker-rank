@@ -1,16 +1,16 @@
 const EXERCISE_LINK = "https://www.hackerrank.com/challenges/grading/problem";
 // segure CTRL e clique no link para abrir esse desafio no seu navegador
 
-const sampleInput = [73, 67, 38, 33];
+const sampleInput = [64, 75, 37, 91];
 
 function gradingStudents(grades) {
   
-  const roundUpToMultiple = (number, multiple) => {
+  const roundUpToMultiple = (number, multiple, threshold) => {
     
     const multiplesArray = (new Array(100 / multiple).fill(multiple)).map((e, index) => e * (index + 1));
     const indexOfNearestMultiple = Math.floor(number / multiple);
   
-    if (number < 38) return number;
+    if (number < threshold) return number;
     else if (multiplesArray[indexOfNearestMultiple] - number < 3) return multiplesArray[indexOfNearestMultiple];
     else return number;
   
@@ -19,7 +19,7 @@ function gradingStudents(grades) {
   let finalGrades = [];
 
   for (let grade of grades) {
-    finalGrades.push(roundUpToMultiple(grade, 5));
+    finalGrades.push(roundUpToMultiple(grade, 5, 38));
   }
   
   return finalGrades;
