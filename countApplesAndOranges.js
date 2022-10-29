@@ -1,4 +1,4 @@
-const EXERCISE_LINK = "https://www.hackerrank.com/challenges/apple-and-orange/problem";
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/apple-and-orange/problem?isFullScreen=true";
 // segure CTRL e clique no link para abrir esse desafio no seu navegador
 
 const sampleInput = {

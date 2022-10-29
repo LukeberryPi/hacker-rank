@@ -1,4 +1,4 @@
-const EXERCISE_LINK = "https://www.hackerrank.com/challenges/plus-minus/problem";
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/plus-minus/problem?isFullScreen=true";
 // segure CTRL e clique no link para abrir esse desafio no seu navegador
 
 const sampleInput = [-4, 3, 9, 0, -4, 1];

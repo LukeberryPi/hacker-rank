@@ -1,4 +1,4 @@
-const EXERCISE_LINK = "https://www.hackerrank.com/challenges/birthday-cake-candles/problem";
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true";
 // segure CTRL e clique no link para abrir esse desafio no seu navegador
 
 const sampleInput = [3, 2, 1, 3, 2];

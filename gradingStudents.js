@@ -1,4 +1,4 @@
-const EXERCISE_LINK = "https://www.hackerrank.com/challenges/grading/problem";
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/grading/problem?isFullScreen=true";
 // segure CTRL e clique no link para abrir esse desafio no seu navegador
 
 const sampleInput = [64, 75, 37, 91];

@@ -1,4 +1,4 @@
-const EXERCISE_LINK = "https://www.hackerrank.com/challenges/time-conversion/problem";
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/time-conversion/problem?isFullScreen=true";
 // segure CTRL e clique no link para abrir esse desafio no seu navegador
 
 const sampleInput = "11:05:45AM";

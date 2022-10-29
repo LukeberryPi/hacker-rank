@@ -1,4 +1,4 @@
-const EXERCISE_LINK = "https://www.hackerrank.com/challenges/diagonal-difference/problem";
+const EXERCISE_LINK = "https://www.hackerrank.com/challenges/diagonal-difference/problem?isFullScreen=true";
 // segure CTRL e clique no link para abrir esse desafio no seu navegador
 
 const sampleInput = [
