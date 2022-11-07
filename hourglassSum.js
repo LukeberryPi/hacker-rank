@@ -39,9 +39,9 @@ function hourglassSum(arr) {
     
   const hourglassSumsArr = [];
 
-  for (let i = 1; i < arr.length - 1; i++) {
-    for (let j = 1; j < arr.length - 1; j++) {
-      hourglassSumsArr.push(singleHourglassSum(i, j));
+  for (let y = 1; y < arr.length - 1; y++) {
+    for (let x = 1; x < arr.length - 1; x++) {
+      hourglassSumsArr.push(singleHourglassSum(x, y));
     }
   }
   
