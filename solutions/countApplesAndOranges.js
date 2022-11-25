@@ -13,10 +13,9 @@ const sampleInput = {
 const { houseStart, houseEnd, appleTree, orangeTree, applesFallDistances, orangesFallDistances } = sampleInput;
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
-  const houseArea = [s, t];
   
-  const isInside = (position, nodesArr) => {
-    return position >= Math.min(...nodesArr) && position <= Math.max(...nodesArr);
+  const isInsideHouse = (position) => {
+    return position >= s && position <= t;
   }
   
   const applesFinalPositions = apples.map(apple => apple + a);
@@ -25,11 +24,11 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
   let applesInHouseArea = 0, orangesInHouseArea = 0;
   
   applesFinalPositions.forEach(apple => {
-    if (isInside(apple, houseArea)) applesInHouseArea++;
+    if (isInsideHouse(apple)) applesInHouseArea++;
   });
   
   orangesFinalPositions.forEach(orange => {
-    if (isInside(orange, houseArea)) orangesInHouseArea++;
+    if (isInsideHouse(orange)) orangesInHouseArea++;
   });
 
   return [applesInHouseArea, orangesInHouseArea];
