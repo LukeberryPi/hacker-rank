@@ -2,38 +2,37 @@ const EXERCISE_LINK = "https://www.hackerrank.com/challenges/apple-and-orange/pr
 // segure CTRL e clique no link para abrir esse desafio no seu navegador
 
 const sampleInput = {
-  houseStartingPos: 7,
-  houseEndPos: 11,
-  appleTreePos: 5,
-  orangeTreePos: 15,
-  applesDistancesFromTree: [-2, 2, 1],
-  orangesDistancesFromTree: [5, -6],
+  houseStart: 7,
+  houseEnd: 11,
+  appleTree: 5,
+  orangeTree: 15,
+  applesFallDistances: [-2, 2, 1],
+  orangesFallDistances: [5, -6],
 };
 
-const { houseStartingPos, houseEndPos, appleTreePos, orangeTreePos, applesDistancesFromTree, orangesDistancesFromTree } = sampleInput;
+const { houseStart, houseEnd, appleTree, orangeTree, applesFallDistances, orangesFallDistances } = sampleInput;
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
   const houseArea = [s, t];
   
-  const isBetweenNodesInclusive = (pos, nodesArr) => {
-    return pos >= Math.min(...nodesArr) && pos <= Math.max(...nodesArr);
+  const isInside = (position, nodesArr) => {
+    return position >= Math.min(...nodesArr) && position <= Math.max(...nodesArr);
   }
   
-  let applesEndPos = apples.map(apple => apple + a);
-  let orangesEndPos = oranges.map(orange => orange + b);
+  const applesFinalPositions = apples.map(apple => apple + a);
+  const orangesFinalPositions = oranges.map(orange => orange + b);
   
-  let applesInHouseArea = 0;
-  let orangesInHouseArea = 0;
+  let applesInHouseArea = 0, orangesInHouseArea = 0;
   
-  for (let applePos of applesEndPos) {
-    if (isBetweenNodesInclusive(applePos, houseArea)) applesInHouseArea++;
-  }
+  applesFinalPositions.forEach(apple => {
+    if (isInside(apple, houseArea)) applesInHouseArea++;
+  });
   
-  for (let orangePos of orangesEndPos) {
-    if (isBetweenNodesInclusive(orangePos, houseArea)) orangesInHouseArea++;
-  }
+  orangesFinalPositions.forEach(orange => {
+    if (isInside(orange, houseArea)) orangesInHouseArea++;
+  });
 
   return [applesInHouseArea, orangesInHouseArea];
 }
 
-console.log(countApplesAndOranges(houseStartingPos, houseEndPos, appleTreePos, orangeTreePos, applesDistancesFromTree, orangesDistancesFromTree));
+console.log(countApplesAndOranges(houseStart, houseEnd, appleTree, orangeTree, applesFallDistances, orangesFallDistances));
